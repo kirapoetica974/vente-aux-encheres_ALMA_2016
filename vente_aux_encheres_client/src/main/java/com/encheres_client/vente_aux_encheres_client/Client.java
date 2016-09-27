@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.encheres.vente_aux_encheres.packageClient;
+package com.encheres_client.vente_aux_encheres_client;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
