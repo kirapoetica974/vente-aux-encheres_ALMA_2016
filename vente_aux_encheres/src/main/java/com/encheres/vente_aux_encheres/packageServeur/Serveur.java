@@ -9,8 +9,6 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.registry.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 /**
  *
  * @author Rachelle
@@ -24,17 +22,17 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
 
 
     @Override
-    public void inscriptionClient(String pseudo) {
+    public void inscriptionClient(String pseudo) throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void surencherir(int prix) {
+    public void surencherir(int prix) throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void tempsEcoule() {
+    public void tempsEcoule() throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

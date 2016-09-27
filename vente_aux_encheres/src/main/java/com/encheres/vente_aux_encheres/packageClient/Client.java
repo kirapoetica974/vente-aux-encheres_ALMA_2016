@@ -46,12 +46,12 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     }
 
     @Override
-    public void objetVendu(String nomClient) {
+    public void objetVendu(String nomClient) throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void majPrix(int nouveauPrix) {
+    public void majPrix(int nouveauPrix)  throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

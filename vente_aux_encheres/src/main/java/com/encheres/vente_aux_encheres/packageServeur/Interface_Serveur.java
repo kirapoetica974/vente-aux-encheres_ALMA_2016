@@ -6,6 +6,7 @@
 package com.encheres.vente_aux_encheres.packageServeur;
 
 import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 /**
  *
@@ -17,19 +18,22 @@ public interface Interface_Serveur extends Remote{
      * Méthode qui permet au client de se connecter sur le serveur
      *
      * @param pseudo
+     * @throws java.rmi.RemoteException en cas d'erreur
      */
-    public void inscriptionClient(String pseudo);
+    public void inscriptionClient(String pseudo) throws RemoteException;
     
     /**
      * Méthode qui permet au client d'enchérir
      *
      * @param prix
+     * @throws java.rmi.RemoteException en cas d'erreur
      */
-    public void surencherir(int prix);
+    public void surencherir(int prix)throws RemoteException;
     
     /**
      * Métode qui permet au cleint de savoir que le temps de la vente est écoulée
      *
+     * @throws java.rmi.RemoteException en cas d'erreur
      */
-    public void tempsEcoule();
+    public void tempsEcoule()throws RemoteException;
 }

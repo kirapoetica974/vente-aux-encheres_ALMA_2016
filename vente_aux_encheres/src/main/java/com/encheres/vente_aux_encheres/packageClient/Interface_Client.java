@@ -21,7 +21,7 @@ public interface Interface_Client extends Remote{
      * @param nomObjet le nom/le type d'objet
      * @param descriptionObjet la description de l'objet
      * @param prix le prix initial de l'objet
-     * @throws java.rmi.RemoteException
+     * @throws java.rmi.RemoteException en cas d'erreur
      */
     public void nouvelleSoumission (String nomObjet, String descriptionObjet, int prix) throws RemoteException;
     
@@ -29,14 +29,16 @@ public interface Interface_Client extends Remote{
      * Méthode qui permet au serveur d'informer le client qu'un objet à été vendu
      *
      * @param nomClient le nom du client à qui a été vendu l'objet
+     * @throws java.rmi.RemoteException en cas d'erreur
      */
-    public void objetVendu (String nomClient);
+    public void objetVendu (String nomClient) throws RemoteException;
     
     /**
      * Méthode qui permet au serveur d'informer le client que le prix a été mis à jour
      *
      * @param nouveauPrix le nouveau prix
+     * @throws java.rmi.RemoteException en cas d'erreur
      */
-    public void majPrix (int nouveauPrix);
+    public void majPrix (int nouveauPrix) throws RemoteException;
     
 }
