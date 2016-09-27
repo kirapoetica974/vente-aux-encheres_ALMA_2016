@@ -20,7 +20,7 @@ public interface Interface_Serveur extends Remote{
     /*
     *InterfaceClient en paramètre
     */
-    public void sarencherir(int prix);
+    public void surencherir(int prix);
     
     /*
     *InterfaceClient en paramètre
