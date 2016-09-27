@@ -17,7 +17,7 @@ public interface Interface_Serveur extends Remote{
     /**
      * Méthode qui permet au client de se connecter sur le serveur
      *
-     * @param pseudo
+     * @param pseudo le pseudo du client qui veut se connecter
      * @throws java.rmi.RemoteException en cas d'erreur
      */
     public void inscriptionClient(String pseudo) throws RemoteException;
@@ -25,7 +25,7 @@ public interface Interface_Serveur extends Remote{
     /**
      * Méthode qui permet au client d'enchérir
      *
-     * @param prix
+     * @param prix le prix à enchérir
      * @throws java.rmi.RemoteException en cas d'erreur
      */
     public void surencherir(int prix)throws RemoteException;
