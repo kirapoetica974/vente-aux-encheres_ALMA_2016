@@ -5,10 +5,23 @@
  */
 package com.encheres.vente_aux_encheres.packageClient;
 
+import com.encheres.vente_aux_encheres.packageServeur.Serveur;
+import java.rmi.server.UnicastRemoteObject;
+
 /**
  *
  * @author Rachelle
  */
-public class Client {
+public class Client extends UnicastRemoteObject implements Interface_Client {
     
+    /*
+    * Pseudo du client
+    */
+    private String pseudo;
+    
+    
+    /*
+    * Pointeur vers le client
+    */
+    private Serveur serveur;
 }

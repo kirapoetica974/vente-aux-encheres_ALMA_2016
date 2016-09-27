@@ -5,10 +5,12 @@
  */
 package com.encheres.vente_aux_encheres.packageServeur;
 
+import java.rmi.Remote;
+
 /**
  *
  * @author Rachelle
  */
-public interface Interface_Serveur {
+public interface Interface_Serveur extends Remote{
     
 }

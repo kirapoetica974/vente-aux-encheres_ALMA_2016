@@ -1,5 +1,0 @@
-package PackageClient;
-
-public interface InterfaceServeur {
-
-}
