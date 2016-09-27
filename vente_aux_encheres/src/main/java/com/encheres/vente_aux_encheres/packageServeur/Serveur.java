@@ -13,9 +13,10 @@ import java.rmi.server.UnicastRemoteObject;
  * @author Rachelle
  */
 public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
-    Serveur() throws RemoteException{
+    
+    public Serveur() throws RemoteException{
         
-    };
+    }
 
     @Override
     public void inscriptionClient(String pseudo) {
@@ -23,7 +24,7 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
     }
 
     @Override
-    public void sarencherir(int prix) {
+    public void surencherir(int prix) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
