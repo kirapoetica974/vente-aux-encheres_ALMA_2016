@@ -29,7 +29,7 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
     }
 
     @Override
-    public void tempsecoule() {
+    public void tempsEcoule() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

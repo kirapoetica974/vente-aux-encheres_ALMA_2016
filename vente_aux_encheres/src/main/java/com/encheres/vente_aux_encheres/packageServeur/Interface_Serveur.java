@@ -12,18 +12,24 @@ import java.rmi.Remote;
  * @author Rachelle
  */
 public interface Interface_Serveur extends Remote{
-    /*
-    *InterfaceClient en paramètre
-    */
+    
+    /**
+     * Méthode qui permet au client de se connecter sur le serveur
+     *
+     * @param pseudo
+     */
     public void inscriptionClient(String pseudo);
     
-    /*
-    *InterfaceClient en paramètre
-    */
+    /**
+     * Méthode qui permet au client d'enchérir
+     *
+     * @param prix
+     */
     public void surencherir(int prix);
     
-    /*
-    *InterfaceClient en paramètre
-    */
-    public void tempsecoule();
+    /**
+     * Métode qui permet au cleint de savoir que le temps de la vente est écoulée
+     *
+     */
+    public void tempsEcoule();
 }
