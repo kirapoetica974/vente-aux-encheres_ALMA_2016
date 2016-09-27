@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+/Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/.metadata/.plugins/org.eclipse.jdt.core
