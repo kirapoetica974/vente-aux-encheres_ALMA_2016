@@ -12,5 +12,18 @@ import java.rmi.Remote;
  * @author Rachelle
  */
 public interface Interface_Serveur extends Remote{
+    /*
+    *InterfaceClient en paramètre
+    */
+    public void inscriptionClient(String pseudo);
     
+    /*
+    *InterfaceClient en paramètre
+    */
+    public void sarencherir(int prix);
+    
+    /*
+    *InterfaceClient en paramètre
+    */
+    public void tempsecoule();
 }
