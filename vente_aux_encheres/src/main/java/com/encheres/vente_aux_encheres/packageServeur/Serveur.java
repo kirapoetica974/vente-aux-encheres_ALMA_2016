@@ -17,11 +17,11 @@ import java.util.logging.Logger;
  */
 public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
     
-    Serveur() throws RemoteException{
+
+    public Serveur() throws RemoteException{
         
-    };
-    
-    
+    }
+
 
     @Override
     public void inscriptionClient(String pseudo) {

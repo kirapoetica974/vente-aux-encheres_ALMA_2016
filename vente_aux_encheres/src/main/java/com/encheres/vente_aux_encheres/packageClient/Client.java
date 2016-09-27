@@ -5,7 +5,7 @@
  */
 package com.encheres.vente_aux_encheres.packageClient;
 
-import com.encheres.vente_aux_encheres.packageServeur.Serveur;
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 /**
@@ -19,9 +19,41 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     */
     private String pseudo;
     
-    
     /*
-    * Pointeur vers le client
+    * Constructeur
     */
-    private Serveur serveur;
+    public Client(String pseudo) throws RemoteException{
+        this.pseudo = pseudo;
+    }
+
+    /**
+     * @return the pseudo
+     */
+    public String getPseudo() {
+        return pseudo;
+    }
+
+    /**
+     * @param pseudo the pseudo to set
+     */
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
+    }
+
+    @Override
+    public void nouvelleSoumission(String nomObjet, String descriptionObjet, int prix) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void objetVendu(String nomClient) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void majPrix(int nouveauPrix) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }

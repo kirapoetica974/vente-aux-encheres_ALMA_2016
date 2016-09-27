@@ -6,11 +6,37 @@
 package com.encheres.vente_aux_encheres.packageClient;
 
 import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 /**
  *
  * @author Rachelle
  */
 public interface Interface_Client extends Remote{
+    
+    /**
+     * Méthode qui permet au serveur d'informer le client qu'il y a eu
+     * un nouvel objet en vente
+     *
+     * @param nomObjet le nom/le type d'objet
+     * @param descriptionObjet la description de l'objet
+     * @param prix le prix initial de l'objet
+     * @throws java.rmi.RemoteException
+     */
+    public void nouvelleSoumission (String nomObjet, String descriptionObjet, int prix) throws RemoteException;
+    
+    /**
+     * Méthode qui permet au serveur d'informer le client qu'un objet à été vendu
+     *
+     * @param nomClient le nom du client à qui a été vendu l'objet
+     */
+    public void objetVendu (String nomClient);
+    
+    /**
+     * Méthode qui permet au serveur d'informer le client que le prix a été mis à jour
+     *
+     * @param nouveauPrix le nouveau prix
+     */
+    public void majPrix (int nouveauPrix);
     
 }
