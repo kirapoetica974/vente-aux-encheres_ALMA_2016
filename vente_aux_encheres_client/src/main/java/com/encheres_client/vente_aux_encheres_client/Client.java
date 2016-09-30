@@ -5,6 +5,7 @@
  */
 package com.encheres_client.vente_aux_encheres_client;
 
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -53,6 +54,17 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     @Override
     public void majPrix(int nouveauPrix)  throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public static void main(String[] args){
+        try{
+            Interface_Serveur serv = (Interface_Serveur)Naming.lookup("//localhost:8090/leServeur");
+            serv.inscriptionClient("naixin");
+        }
+        catch(Exception e){
+            System.out.println("Erreur in serveur.java main()");
+            e.printStackTrace();
+        }
     }
     
     

@@ -23,7 +23,9 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
 
     @Override
     public void inscriptionClient(String pseudo) throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("hello" + pseudo);
+                
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -38,11 +40,19 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
     
     public static void main(String[] args){
         try {
+            Serveur serveur = new Serveur();
+            //Interface_Serveur stub = (Interface_Serveur)UnicastRemoteObject.exportObject(serveur, 8090);
             LocateRegistry.createRegistry(8090);
-            Serveur leServeur = new Serveur();
-            Naming.bind("//blabla:8090/leServeur", leServeur);
+            //Registry registry = LocateRegistry.getRegistry();
+            //registry.bind("SERV",serveur);
+            //Serveur leServeur = new Serveur();
+            Naming.bind("//localhost:8090/leServeur",serveur);
+            System.out.println("Server ready");
+
+            
         } catch (Exception e) {
             System.out.println("Erreur in serveur.java main()");
+            e.printStackTrace();
         }
     }
 }
