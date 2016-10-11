@@ -18,6 +18,10 @@ import vente_aux_encheres_serveur.Interface_Serveur;
  *
  * @author Rachelle
  */
+/**
+ *
+ * @author Rachelle
+ */
 public class Client extends UnicastRemoteObject implements Interface_Client {
     
     /*
@@ -73,15 +77,12 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-
-        /*
-         * attend que le serveur est libre
-         */
-        //while(){}
+        
     	
         try{
             Interface_Serveur serv = (Interface_Serveur)Naming.lookup("//localhost:8090/leServeur");
             serv.inscriptionClient(pseudo);
+            serv.tempsEcoule();
         }
         catch(Exception e){
             System.out.println("Erreur in serveur.java main()");
