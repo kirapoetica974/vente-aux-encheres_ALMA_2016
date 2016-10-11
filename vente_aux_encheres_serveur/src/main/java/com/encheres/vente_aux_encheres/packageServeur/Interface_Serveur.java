@@ -29,7 +29,7 @@ public interface Interface_Serveur extends Remote{
      * @param prix le prix à enchérir
      * @throws java.rmi.RemoteException en cas d'erreur
      */
-    public void surencherir(int prix)throws RemoteException;
+    public int surencherir(int prix)throws RemoteException;
     
     /**
      * Métode qui permet au cleint de savoir que le temps de la vente est écoulée

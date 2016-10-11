@@ -10,7 +10,8 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.registry.*;
 
-import vente_aux_encheres_client.Interface_Client;
+import com.encheres_client.vente_aux_encheres_client.Interface_Client;
+
 /**
  *
  * @author Rachelle & Naixin & Nina
@@ -64,7 +65,6 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
         		}
         	}
         }
-    }
 
     @Override
     synchronized public void tempsEcoule() {
