@@ -9,9 +9,12 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.registry.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.encheres_client.vente_aux_encheres_client.Interface_Client;
+import org.omg.IOP.ENCODING_CDR_ENCAPS;
 
+import vente_aux_encheres_client.Interface_Client;
 /**
  *
  * @author Rachelle & Naixin & Nina
@@ -24,7 +27,8 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
 	
 	public List<Integer> liste_prix = new ArrayList<Integer>(); //list qui prend les prix encherissé par les clients
 	
-	public static int prix = 10;
+	public static int prix = 10;//valeur quelconque pour test
+	
 	private static Etat_Serveur es = Etat_Serveur.en_attente;
 	
 	public static Serveur serveur;
@@ -57,14 +61,16 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
         liste_prix.add(prix);//ajoute le prix proposé par un client dans la liste
         Nb_client_repondu++;
         if(Nb_client_repondu == Nb_client_inscrit){//tous le mondes a répondu commence un nouveau tour
-        	serveur.notify();
         	es = Etat_Serveur.vente_terminee;
         	for(Integer i : liste_prix){ //prend le plus grand prix proposé
-        		if(i > prix){
-        			prix = i;
+        		if(i > Serveur.prix){
+        			Serveur.prix = i;
+        			System.out.println("prix proposé :" +prix);
         		}
         	}
+        	serveur.notify();
         }
+    }
 
     @Override
     synchronized public void tempsEcoule() {
@@ -73,10 +79,13 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
         if(!liste_prix.isEmpty()){//si il y a quelqu'un a encherir on prends le plus grand valeur
         	for(Integer i : liste_prix){ //prend le plus grand prix proposé
         		if(i > prix){
-        			prix = i;
+        			Serveur.prix = i;
         		}
         	}
+        }else{
+        	System.out.println("Aucun client a enchérit");
         }
+        	
     }
     
     public static void main(String[] args){
@@ -125,6 +134,7 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
 	            	}
 	            	serveur.notify();
 	            }
+
             }//fin while
             
         } catch (Exception e) {
