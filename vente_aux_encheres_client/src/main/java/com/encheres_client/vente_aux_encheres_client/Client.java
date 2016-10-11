@@ -11,21 +11,15 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
-import java.util.List;
 
-import vente_aux_encheres_serveur.Interface_Serveur;
+import com.encheres.vente_aux_encheres.packageServeur.Interface_Serveur;
+
 
 /**
  * @author Rachelle
  */
 public class Client extends UnicastRemoteObject implements Interface_Client {
-    
-	/*
-	 * Liste des objets à mettre aux enchères
-	 */
-	List<ObjetEnchere> listeObjetsEncheres = new ArrayList<ObjetEnchere>();
-	
+
 	/*
      * Pseudo du client
      */
@@ -37,7 +31,9 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     public Client(String pseudo) throws RemoteException{
         this.pseudo = pseudo;
     }
-
+    
+    private ObjetEnchere objetEnVente;
+    
     /**
      * @return le pseudo
      */
@@ -55,20 +51,29 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     @Override
     public void nouvelleSoumission(String nomObjet, String descriptionObjet, int prix) throws RemoteException {
         System.out.println("L'objet à vendre : " + nomObjet + " \ndescription : " + descriptionObjet + "\nPrix est : " + prix);
-      //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        
-        
-        
+        objetEnVente = new ObjetEnchere(nomObjet, descriptionObjet, prix);    
     }
 
     @Override
-    public void objetVendu(String nomClient) throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void objetVendu(String nomClient) throws RemoteException, EnchereException {
+    	//Lorsque l'objet est vendu il possède un acquéreur
+        if(null == objetEnVente.getNomAcquereur() ||
+        		objetEnVente.getNomAcquereur().isEmpty()) {
+        	objetEnVente.setNomAcquereur(nomClient);
+        }
+        else {
+        	throw new EnchereException("Objet déjà vendu !");
+        }
     }
 
     @Override
-    public void majPrix(int nouveauPrix)  throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void majPrix(int nouveauPrix)  throws RemoteException, EnchereException {
+        if(objetEnVente.getPrix() < nouveauPrix) {
+        	objetEnVente.setPrix(nouveauPrix);
+        }
+        else {
+        	throw new EnchereException("Prix inférieur au prix de base !");
+        }
     }
     
     

@@ -7,13 +7,15 @@ package com.encheres_client.vente_aux_encheres_client;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.List;
 
-/**
- * Interface du client
- *
- * @author Rachelle
- */
-public interface Interface_Client extends Remote{
+
+	/**
+	 * Interface du client
+	 *
+	 * @author Rachelle
+	 */
+	public interface Interface_Client extends Remote{
     
     /**
      * Méthode qui permet au serveur d'informer le client qu'il y a eu
@@ -31,15 +33,17 @@ public interface Interface_Client extends Remote{
      *
      * @param nomClient le nom du client à qui a été vendu l'objet
      * @throws java.rmi.RemoteException en cas d'erreur
+     * @throws EnchereException 
      */
-    public void objetVendu (String nomClient) throws RemoteException;
+    public void objetVendu (String nomClient) throws RemoteException, EnchereException;
     
     /**
      * Méthode qui permet au serveur d'informer le client que le prix a été mis à jour
      *
      * @param nouveauPrix le nouveau prix
      * @throws java.rmi.RemoteException en cas d'erreur
+     * @throws EnchereException 
      */
-    public void majPrix (int nouveauPrix) throws RemoteException;
+    public void majPrix (int nouveauPrix) throws RemoteException, EnchereException;
     
 }
