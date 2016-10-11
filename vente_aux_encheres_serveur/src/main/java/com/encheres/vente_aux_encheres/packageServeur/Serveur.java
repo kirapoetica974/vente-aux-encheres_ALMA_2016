@@ -47,7 +47,7 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
     }
 
     @Override
-    public void surencherir(int prix) throws RemoteException {
+    public int surencherir(int prix) throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

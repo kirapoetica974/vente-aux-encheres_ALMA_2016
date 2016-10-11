@@ -1,0 +1,117 @@
+2016-09-28 08:10:35,470 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/maven-metadata.xml
+2016-09-28 08:10:35,567 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/maven-metadata.xml
+2016-09-28 08:10:35,626 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+2016-09-28 08:10:35,720 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+2016-09-28 08:14:45,750 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: groupe_id:artifact_id:0.0.1-SNAPSHOT @ /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/artifact_id/pom.xml.
+2016-09-28 08:14:46,065 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /artifact_id/src/main/java
+2016-09-28 08:14:46,068 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /artifact_id/src/main/resources
+2016-09-28 08:14:46,069 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /artifact_id/src/test/java
+2016-09-28 08:14:46,069 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /artifact_id/src/test/resources
+2016-09-28 08:14:46,418 [Worker-3] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, config, --system, --edit]' in '/usr/bin', return code '128', error message 'fatal: Could not switch to '/Applications/Xcode-beta.app/Contents/Developer/usr/etc/': No such file or directory
+'
+2016-09-28 08:14:47,362 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: groupe_id:artifact_id:0.0.1-SNAPSHOT @ /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/artifact_id/pom.xml.
+2016-09-28 08:14:47,452 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: groupe_id:artifact_id:0.0.1-SNAPSHOT @ /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/artifact_id/pom.xml.
+2016-09-28 08:14:47,584 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-28 08:14:47,595 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-09-28 08:14:47,598 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-28 08:14:47,599 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-09-28 08:14:48,664 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: groupe_id:artifact_id:0.0.1-SNAPSHOT @ /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/artifact_id/pom.xml.
+2016-09-28 08:14:48,853 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-28 08:14:48,858 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-09-28 08:14:48,861 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-28 08:14:48,861 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-11 09:38:55,766 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.encheres_client:vente_aux_encheres_client:1.0-SNAPSHOT @ /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/pom.xml.
+2016-10-11 09:38:55,843 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.encheres:vente_aux_encheres_serveur:1.0-SNAPSHOT @ /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_serveur/pom.xml.
+2016-10-11 09:38:55,855 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:6.8.1 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2016-10-11 09:38:56,157 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /vente_aux_encheres_client/src/main/java
+2016-10-11 09:38:56,158 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /vente_aux_encheres_client/src/test/java
+2016-10-11 09:38:56,287 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /vente_aux_encheres_serveur/src/main/java
+2016-10-11 09:38:56,288 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /vente_aux_encheres_serveur/src/main/resources
+2016-10-11 09:38:56,292 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /vente_aux_encheres_serveur/src/test/java
+2016-10-11 09:38:56,320 [Worker-7] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 2 project(s) in 1 sec
+2016-10-11 09:38:57,436 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.encheres_client:vente_aux_encheres_client:1.0-SNAPSHOT @ /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/pom.xml.
+2016-10-11 09:38:57,473 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.encheres:vente_aux_encheres_serveur:1.0-SNAPSHOT @ /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_serveur/pom.xml.
+2016-10-11 09:38:57,479 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:6.8.1 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2016-10-11 09:38:57,925 [Worker-7] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, config, --system, --edit]' in '/usr/bin', return code '128', error message 'fatal: Could not switch to '/Applications/Xcode-beta.app/Contents/Developer/usr/etc/': No such file or directory
+'
+2016-10-11 09:39:00,515 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:39:00,515 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 09:39:00,519 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:39:00,519 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 09:39:00,532 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.testng:testng:jar:6.8.1 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2016-10-11 09:39:00,540 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:39:00,552 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-11 09:39:00,553 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:39:00,554 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_serveur/src/test/resources
+2016-10-11 09:40:04,832 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:40:04,833 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 09:40:04,834 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:40:04,834 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 09:40:04,842 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:40:04,845 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-11 09:40:04,846 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:40:04,846 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_serveur/src/test/resources
+2016-10-11 09:49:45,506 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:49:45,507 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 09:49:45,508 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:49:45,508 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 09:55:42,128 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:55:42,129 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 09:55:42,130 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 09:55:42,130 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:02:54,840 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:02:54,841 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-11 10:02:54,843 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:02:54,843 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_serveur/src/test/resources
+2016-10-11 10:03:12,422 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:03:12,422 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-11 10:03:12,427 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:03:12,427 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_serveur/src/test/resources
+2016-10-11 10:03:46,818 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:03:46,818 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:03:46,820 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:03:46,820 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:04:31,261 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:04:31,261 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:04:31,262 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:04:31,263 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:05:38,861 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:05:38,861 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:05:38,863 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:05:38,863 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:19:22,010 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:19:22,010 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:19:22,012 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:19:22,012 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:20:05,311 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:20:05,311 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:20:05,312 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:20:05,313 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:21:18,322 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:21:18,323 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:21:18,324 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:21:18,324 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:26:09,666 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:26:09,667 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:26:09,668 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:26:09,668 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:26:26,864 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:26:26,864 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:26:26,868 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:26:26,868 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:33:42,270 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:33:42,271 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:33:42,272 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:33:42,273 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:34:25,433 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:34:25,437 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:34:25,439 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:34:25,439 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:35:02,221 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:35:02,221 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:35:02,222 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:35:02,222 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
+2016-10-11 10:55:16,111 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:55:16,111 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/main/resources
+2016-10-11 10:55:16,112 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-10-11 10:55:16,112 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/Rachelle/Documents/M2 ALMA/MiddleWare/vente_enchere/vente-aux-encheres_ALMA_2016/vente_aux_encheres_client/src/test/resources
