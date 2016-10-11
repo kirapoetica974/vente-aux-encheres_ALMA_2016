@@ -11,36 +11,42 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.List;
 
 import vente_aux_encheres_serveur.Interface_Serveur;
 
 /**
- *
  * @author Rachelle
  */
 public class Client extends UnicastRemoteObject implements Interface_Client {
     
-    /*
-    * Pseudo du client
-    */
+	/*
+	 * Liste des objets à mettre aux enchères
+	 */
+	List<ObjetEnchere> listeObjetsEncheres = new ArrayList<ObjetEnchere>();
+	
+	/*
+     * Pseudo du client
+     */
     private static String pseudo;
     
     /*
-    * Constructeur
-    */
+     * Constructeur
+     */
     public Client(String pseudo) throws RemoteException{
         this.pseudo = pseudo;
     }
 
     /**
-     * @return the pseudo
+     * @return le pseudo
      */
     public String getPseudo() {
         return pseudo;
     }
 
     /**
-     * @param pseudo the pseudo to set
+     * @param pseudo le pseudo à modifier
      */
     public void setPseudo(String pseudo) {
         this.pseudo = pseudo;
@@ -49,7 +55,10 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     @Override
     public void nouvelleSoumission(String nomObjet, String descriptionObjet, int prix) throws RemoteException {
         System.out.println("L'objet à vendre : " + nomObjet + " \ndescription : " + descriptionObjet + "\nPrix est : " + prix);
-    	//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        
+        
     }
 
     @Override
@@ -75,7 +84,7 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
 		}
 
         /*
-         * attend que le serveur est libre
+         * attend que le serveur soit libre
          */
         //while(){}
     	

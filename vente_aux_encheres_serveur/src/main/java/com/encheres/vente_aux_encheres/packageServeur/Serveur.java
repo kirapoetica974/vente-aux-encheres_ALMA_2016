@@ -10,7 +10,8 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.registry.*;
 
-import vente_aux_encheres_client.Interface_Client;
+import com.encheres_client.vente_aux_encheres_client.Interface_Client;
+
 /**
  *
  * @author Rachelle
