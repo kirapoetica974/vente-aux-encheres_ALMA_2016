@@ -86,7 +86,8 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
     @Override
     synchronized public void tempsEcoule() {
         serveur.notify();//réveille le serveur qui attend les réponses des clients
-        es = Etat_Serveur.vente_terminee;//quand le temps écoule la vente termine
+        //es = Etat_Serveur.vente_terminee;//quand le temps écoule la vente termine
+    	
         if(!listePrix.isEmpty()){//si il y a quelqu'un a encherir on prend la plus grande valeur
         	for(Integer i : listePrix){ //prend le plus grand prix proposé
         		if(i > prix){
@@ -94,7 +95,9 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
         		}
         	}
         }else{
+        	//Vente terminée
         	System.out.println("Aucun client n'a enchéri");
+        	es = Etat_Serveur.vente_terminee;
         }
         	
     }

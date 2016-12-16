@@ -12,6 +12,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Scanner;
+import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 
 import com.encheres.vente_aux_encheres.packageServeur.Interface_Serveur;
@@ -22,6 +23,8 @@ import com.encheres.vente_aux_encheres.packageServeur.Interface_Serveur;
  */
 public class Client extends UnicastRemoteObject implements Interface_Client {
     
+	private Timer timer;
+	
     /*
     * Pseudo du client
     */
@@ -31,6 +34,16 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
      * Pour lire les entrées
      */
     private static Scanner scanner = new Scanner(System.in);
+    
+    /*
+     * Chronometre le tour pour surencherir
+     */
+    private static Chronometre chrono = new Chronometre();
+    
+    /*
+     * Etat du client : s'il a déjà enchéri ou pas
+     */
+    private static boolean encheri = false;
     
     /*
     * Constructeur
@@ -55,7 +68,7 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
 
     @Override
     public void nouvelleSoumission(String nomObjet, String descriptionObjet, int prix) throws RemoteException {
-        System.out.println("L'objet à vendre : " + nomObjet + " \ndescription : " + descriptionObjet + "\nPrix est : " + prix);
+        System.out.println("L'objet à vendre : " + nomObjet + " \ndescription : " + descriptionObjet + "\nPrix est : " + prix);    
     }
 
     @Override
@@ -66,11 +79,14 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     @Override
     public void majPrix(int nouveauPrix)  throws RemoteException {
     	System.out.println("Prix = " + nouveauPrix);
+    	chrono.start();
+    	encheri = false;
     }
     
     
     public static void main(String[] args) throws RemoteException{
-
+    	
+    	//Demande d'inscription au serveur
         try {
         	System.out.println("Pseudo ? ");
         	String pseudoEntre = scanner.next();
@@ -81,20 +97,30 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
 			e1.printStackTrace();
 		}
         
-    	
+        //Connexion du client au serveur
         try{
             Interface_Serveur serv = (Interface_Serveur)Naming.lookup("//localhost:8090/leServeur");
             serv.inscriptionClient(pseudo);
 
             //TimeUnit.SECONDS.sleep(5); 
             //fait attendre le client pendant 5 seconde avant de surenchérir, sinon il va changer le prix avant la première recupération
-            
             //si le client appelle la méthode surencherissment il n'appelle plus tempsEcoule
+
+            chrono.start();
             
-            System.out.println("Encherir ? ");
-            int encherissement = scanner.nextInt();
-            serv.surencherir(encherissement);
-            serv.tempsEcoule();
+            //Le client a 10 secondes pour surencherir
+            while(true){
+            	while(!encheri && chrono.getDuree()<=10) {
+            		System.out.println("Encherir ? ");
+            		int encherissement = scanner.nextInt();
+            		chrono.stop();
+            		serv.surencherir(encherissement);
+            		encheri = true;
+            	}
+            	if(chrono.getDuree()>10) {
+            		serv.tempsEcoule();
+            	}
+            }
         }
         catch(Exception e){
             System.out.println("Erreur in serveur.java main()");
