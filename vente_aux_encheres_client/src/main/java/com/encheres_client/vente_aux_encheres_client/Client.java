@@ -30,7 +30,7 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     /*
      * Pour lire les entrées
      */
-    private static Scanner scanner;
+    private static Scanner scanner = new Scanner(System.in);
     
     /*
     * Constructeur
@@ -73,7 +73,7 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
 
         try {
         	System.out.println("Pseudo ? ");
-        	String pseudoEntre = scanner.nextLine();
+        	String pseudoEntre = scanner.next();
         	Client client = new Client(pseudoEntre);
             LocateRegistry.createRegistry(8080);
 			Naming.bind("//localhost:8080/" + pseudo, client);

@@ -35,6 +35,8 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
 	
 	private int nbClientInscrit = 0;
 	
+	private static List<Objet> listeObjet = new ArrayList<Objet>();
+	
 	public static Serveur serveur;
 
     public Serveur() throws RemoteException{
@@ -93,13 +95,16 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
         		}
         	}
         }else{
-        	System.out.println("Aucun client a enchérit");
+        	System.out.println("Aucun client n'a enchéri");
         }
         	
     }
     
     public static void main(String[] args){
         try {
+        	//Creation des objets
+        	listeObjet.add(new Objet("Livre",10,"NotreDame"));
+        	
             serveur = new Serveur();
             LocateRegistry.createRegistry(8090);
             Naming.bind("//localhost:8090/leServeur",serveur);
@@ -125,7 +130,7 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
 	            	for (Map.Entry<String,String> e : listeClient.entrySet()) {
 	            		System.out.println("//"+ e.getValue() +":8080/" + e.getKey());
 	            		Interface_Client client = (Interface_Client)Naming.lookup("//"+ e.getValue() +":8080/" + e.getKey());  
-	            		client.nouvelleSoumission("NotreDame", "livre", prix);
+	            		client.nouvelleSoumission(listeObjet.get(0).getNom(), listeObjet.get(0).getDescription(), listeObjet.get(0).getPrix());
 	            	}
 	            	
 	                //Interface_Client client = (Interface_Client)Naming.lookup("//localhost:8080/naixinWANG");
