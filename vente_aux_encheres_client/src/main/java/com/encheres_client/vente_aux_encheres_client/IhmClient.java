@@ -12,7 +12,10 @@ import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
+import java.net.MalformedURLException;
+import java.rmi.AlreadyBoundException;
 import java.rmi.Naming;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
 import com.encheres.vente_aux_encheres.packageServeur.Interface_Serveur;
@@ -52,12 +55,20 @@ public class IhmClient extends Applet{
 		public synchronized void actionPerformed(ActionEvent e) {
 			try {
 				if (serveurCourant != null && !pseudo.getText().isEmpty()) {
-					Client client = new Client(pseudo.getText());
+					Client client = null;
+					client = new Client(pseudo.getText());
 		            LocateRegistry.createRegistry(8080);
 					Naming.bind("//localhost:8080/" + pseudo.getText(), client);
 					serveurCourant.inscriptionClient(pseudo.getText());
 				}
-			} catch(Exception ex){};
+			}
+			catch (MalformedURLException e2) {
+				e2.printStackTrace();
+			} catch (AlreadyBoundException e2) {
+				e2.printStackTrace();
+			} catch (RemoteException e1) {
+				e1.printStackTrace();
+			}
 		}
 	}
 
