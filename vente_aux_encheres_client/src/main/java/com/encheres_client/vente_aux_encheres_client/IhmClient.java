@@ -25,29 +25,41 @@ import com.encheres.vente_aux_encheres.packageServeur.Interface_Serveur;
  *
  */
 public class IhmClient extends Applet{
+	
+	private static IhmClient instanceIhm;
+	
 	TextField pseudo = new TextField("toto");
-	Label titreNomObjet = new Label();
+	Label titreNomObjet = new Label("Nom de l'objet : ");
 	Label nomObjet = new Label();
-	Label titreDescriptionObjet = new Label();
+	Label titreDescriptionObjet = new Label("Description de l'objet : ");
 	Label descriptionObjet = new Label();
 	Label nouveauPrix = new Label();
 	Label prix = new Label();
 
 	TextField prixASurencherir = new TextField(4);
-	Label prixCourant = new Label("100");
+	Label prixCourant = new Label();
 
 	private static Interface_Serveur serveurCourant;
 
 	Button boutonSurencherirPrix = new Button("SURENCHERIR");
 	Button boutonCommencer = new Button("GO");
+	
+	public IhmClient() {
+		instanceIhm = this;
+	}
+
+	
+	public static IhmClient getInstance(){
+	      return instanceIhm;
+	}
 
 	class ActionSurencherirPrix implements ActionListener {
 		public synchronized void actionPerformed(ActionEvent e) {
 			Integer prix;
 			try {
 				prix = Integer.parseInt(prixASurencherir.getText());
-				//prixCourant.setText(serveurCourant.surencherir(prix));
-			} catch(Exception ex){};
+				prixCourant.setText(Integer.toString(serveurCourant.surencherir(prix)));
+			} catch(Exception ex){}
 		}
 	}
 	
@@ -81,6 +93,7 @@ public class IhmClient extends Applet{
 		
 		add(titreNomObjet);
 		add(nomObjet);
+		
 		add(titreDescriptionObjet);
 		add(descriptionObjet);
 
@@ -100,9 +113,47 @@ public class IhmClient extends Applet{
 			
 			
 		} catch(Exception e){System.out.println ("ERREUR LORS DE LA CONNEXION AVEC LE SERVEUR");}
-		
-		
+	
 		
 	}
+	
+	public String getPseudo(){
+		return this.pseudo.getText();
+	}
+	
+	public void setPseudo(String pseudo){
+		this.pseudo.setText(pseudo);
+	}
+	
+	public String getNomObjet(){
+		return this.nomObjet.getText();
+	}
+	
+	public void setNomObjet(String nom){
+		this.nomObjet.setText(nom);
+	}
 
+	public String getDescObjet(){
+		return this.descriptionObjet.getText();
+	}
+	
+	public void setDescObjet(String desc){
+		this.descriptionObjet.setText(desc);
+	}
+	
+	public String getPrixInit(){
+		return this.prix.getText();
+	}
+	
+	public void setPrix(String prix){
+		this.prix.setText(prix);
+	}
+	
+	public void setPrixCourant(String prix){
+		this.prixCourant.setText(prix);
+	}
+	
+	public String getPrixCourant(){
+		return this.prixCourant.getText();
+	}
 }

@@ -55,7 +55,11 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
 
     @Override
     public void nouvelleSoumission(String nomObjet, String descriptionObjet, int prix) throws RemoteException {
-        System.out.println("L'objet à vendre : " + nomObjet + " \ndescription : " + descriptionObjet + "\nPrix est : " + prix);
+    	IhmClient.getInstance().setNomObjet(nomObjet);
+    	IhmClient.getInstance().setDescObjet(descriptionObjet);
+    	IhmClient.getInstance().setPrix(Integer.toString(prix));
+    	IhmClient.getInstance().setPrixCourant(Integer.toString(prix));
+    	System.out.println("L'objet à vendre : " + nomObjet + " \ndescription : " + descriptionObjet + "\nPrix est : " + prix);
     }
 
     @Override
