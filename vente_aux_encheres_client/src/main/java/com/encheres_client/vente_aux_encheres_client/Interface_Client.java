@@ -7,7 +7,6 @@ package com.encheres_client.vente_aux_encheres_client;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.List;
 
 
 	/**

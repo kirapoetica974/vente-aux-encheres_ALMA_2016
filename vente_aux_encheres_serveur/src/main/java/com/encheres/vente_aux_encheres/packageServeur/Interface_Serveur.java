@@ -32,7 +32,7 @@ public interface Interface_Serveur extends Remote{
     public int surencherir(int prix)throws RemoteException;
     
     /**
-     * Métode qui permet au cleint de savoir que le temps de la vente est écoulée
+     * Métode qui permet au client de savoir que le temps de la vente est écoulée
      *
      * @throws java.rmi.RemoteException en cas d'erreur
      */
