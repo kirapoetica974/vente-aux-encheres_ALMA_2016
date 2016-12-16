@@ -55,7 +55,8 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
 	    		}
 	    		try {
 					listeClient.put(pseudo, getClientHost()); //enregistre le nom du client et son adresse IP dans un map
-				} catch (ServerNotActiveException e) {
+					System.out.println("Le client " + pseudo + " a été enregistré.");
+	    		} catch (ServerNotActiveException e) {
 					e.printStackTrace();
 				}
 	        	nbClientInscrit++;
