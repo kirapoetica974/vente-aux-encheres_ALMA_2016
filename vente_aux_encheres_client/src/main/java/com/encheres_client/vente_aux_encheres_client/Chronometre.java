@@ -23,6 +23,7 @@ public class Chronometre {
 	
 	//Retourne la durée en seconde
 	public long getDuree() {
+		duree = System.currentTimeMillis()-depart;
 		return duree/1000;
 	}
 	

@@ -77,6 +77,7 @@ public class IhmClient extends Applet{
 				if (serveurCourant != null && !pseudo.getText().isEmpty()) {
 					Client client = null;
 					client = new Client(pseudo.getText());
+					boutonCommencer.setEnabled(false);
 		            LocateRegistry.createRegistry(8080);
 					Naming.bind("//localhost:8080/" + pseudo.getText(), client);
 					serveurCourant.inscriptionClient(pseudo.getText());
@@ -126,7 +127,6 @@ public class IhmClient extends Applet{
 			System.out.println(" Connexion avec le serveur réussie");
 			setInfoServeur("Connexion avec le serveur réussie");
 			boutonSurencherirPrix.setEnabled(true);
-			boutonCommencer.setEnabled(false);
 			boutonCommencer.addActionListener(new ActionCommencer());
 			boutonSurencherirPrix.addActionListener(new ActionSurencherirPrix());
 			
