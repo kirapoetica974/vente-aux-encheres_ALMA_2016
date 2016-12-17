@@ -47,6 +47,8 @@ public class IhmClient extends Applet{
 	private Button boutonSurencherirPrix = new Button("SURENCHERIR");
 	private Button boutonCommencer = new Button("GO");
 	
+	public static Chronometre chrono = new Chronometre();
+	
 	public IhmClient() {
 		instanceIhm = this;
 	}
@@ -60,7 +62,11 @@ public class IhmClient extends Applet{
 			Integer prix;
 			try {
 				prix = Integer.parseInt(prixASurencherir.getText());
+				// On arrête de chrono lorsque le client surencheri
+				chrono.stop();
 				prixCourant.setText(Integer.toString(serveurCourant.surencherir(prix)));
+				// On redémarre le chrono quand il y a un nouveau tour d'enchère
+				chrono.start();
 			} catch(Exception ex){}
 		}
 	}
@@ -110,14 +116,24 @@ public class IhmClient extends Applet{
 		add(prixASurencherir);
 
 		add(boutonSurencherirPrix);
+		boutonSurencherirPrix.setEnabled(false);
 		add(infoServeur);
+		
+		
 		
 		try {
 			serveurCourant = (Interface_Serveur)Naming.lookup("//localhost:8090/leServeur");
 			System.out.println(" Connexion avec le serveur réussie");
 			setInfoServeur("Connexion avec le serveur réussie");
+			boutonSurencherirPrix.setEnabled(true);
+			boutonCommencer.setEnabled(false);
 			boutonCommencer.addActionListener(new ActionCommencer());
 			boutonSurencherirPrix.addActionListener(new ActionSurencherirPrix());
+			
+			// On informe au serveur que le temps est écoulé lorsque le chrono atteint 10 secondes
+			if(chrono.getDuree() >= 10){
+				serveurCourant.tempsEcoule();
+			}
 			
 			
 		} catch(Exception e){System.out.println ("ERREUR LORS DE LA CONNEXION AVEC LE SERVEUR");}
@@ -171,5 +187,9 @@ public class IhmClient extends Applet{
 	
 	public String getInfoServeur(){
 		return infoServeur.getText();
+	}
+	
+	public Interface_Serveur getServeurCourant(){
+		return IhmClient.serveurCourant;
 	}
 }

@@ -59,16 +59,19 @@ public class Client extends UnicastRemoteObject implements Interface_Client {
     	IhmClient.getInstance().setDescObjet(descriptionObjet);
     	IhmClient.getInstance().setPrix(Integer.toString(prix));
     	IhmClient.getInstance().setPrixCourant(Integer.toString(prix));
+    	IhmClient.chrono.start();
     	System.out.println("L'objet à vendre : " + nomObjet + " \ndescription : " + descriptionObjet + "\nPrix est : " + prix);
     }
 
     @Override
     public void objetVendu(String nomClient) throws RemoteException {
+    	IhmClient.getInstance().setInfoServeur("Vente terminée !!! L'objet a été vendu à " + nomClient);
     	System.out.println("Vente terminée !!! L'objet a été vendu à " + nomClient);
     }
 
     @Override
     public void majPrix(int nouveauPrix)  throws RemoteException {
+    	IhmClient.getInstance().setPrixCourant(Integer.toString(nouveauPrix));
     	System.out.println("Prix = " + nouveauPrix);
     }
     
