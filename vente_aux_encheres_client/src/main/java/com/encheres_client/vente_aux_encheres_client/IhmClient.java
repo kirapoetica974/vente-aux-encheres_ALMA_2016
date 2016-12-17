@@ -28,26 +28,28 @@ public class IhmClient extends Applet{
 	
 	private static IhmClient instanceIhm;
 	
-	TextField pseudo = new TextField("toto");
-	Label titreNomObjet = new Label("Nom de l'objet : ");
-	Label nomObjet = new Label();
-	Label titreDescriptionObjet = new Label("Description de l'objet : ");
-	Label descriptionObjet = new Label();
-	Label nouveauPrix = new Label();
-	Label prix = new Label();
-
-	TextField prixASurencherir = new TextField(4);
-	Label prixCourant = new Label();
-
 	private static Interface_Serveur serveurCourant;
+	
+	private Label titreNomObjet = new Label("Nom de l'objet : ");
+	private Label nomObjet = new Label();
+	private Label titreDescriptionObjet = new Label("Description de l'objet : ");
+	private Label titrePrixDepart = new Label("Prix de départ : ");
+	private Label titrePrixSurencheri = new Label("Prix en cours : ");
+	private Label descriptionObjet = new Label();
+	private Label nouveauPrix = new Label("Nouveau prix : ");
+	private Label prix = new Label();
+	private Label infoServeur = new Label();
+	private Label prixCourant = new Label();
 
-	Button boutonSurencherirPrix = new Button("SURENCHERIR");
-	Button boutonCommencer = new Button("GO");
+	private TextField prixASurencherir = new TextField(4);
+	private TextField pseudo = new TextField("toto");
+
+	private Button boutonSurencherirPrix = new Button("SURENCHERIR");
+	private Button boutonCommencer = new Button("GO");
 	
 	public IhmClient() {
 		instanceIhm = this;
 	}
-
 	
 	public static IhmClient getInstance(){
 	      return instanceIhm;
@@ -87,7 +89,8 @@ public class IhmClient extends Applet{
 	public void init(){
 		setName("Vente");
 		setSize(600, 300);
-		setLayout(new GridLayout(6,2));
+		setLayout(new GridLayout(7,2));
+		
 		add(pseudo);
 		add(boutonCommencer);
 		
@@ -97,17 +100,22 @@ public class IhmClient extends Applet{
 		add(titreDescriptionObjet);
 		add(descriptionObjet);
 
+		add(titrePrixDepart);
 		add(prix);
+		
+		add(titrePrixSurencheri);
 		add(prixCourant);
 
 		add(nouveauPrix);
 		add(prixASurencherir);
 
 		add(boutonSurencherirPrix);
+		add(infoServeur);
 		
 		try {
 			serveurCourant = (Interface_Serveur)Naming.lookup("//localhost:8090/leServeur");
-			System.out.println("Connexion avec le serveur réussie");
+			System.out.println(" Connexion avec le serveur réussie");
+			setInfoServeur("Connexion avec le serveur réussie");
 			boutonCommencer.addActionListener(new ActionCommencer());
 			boutonSurencherirPrix.addActionListener(new ActionSurencherirPrix());
 			
@@ -155,5 +163,13 @@ public class IhmClient extends Applet{
 	
 	public String getPrixCourant(){
 		return this.prixCourant.getText();
+	}
+	
+	public void setInfoServeur(String info){
+		this.infoServeur.setText(info);
+	}
+	
+	public String getInfoServeur(){
+		return infoServeur.getText();
 	}
 }
