@@ -221,7 +221,7 @@ public class Serveur extends UnicastRemoteObject implements Interface_Serveur{
 	                e.printStackTrace();
 	            }
 	            
-	            //Attente que le serveur reçoit toutes les réponse des clients ou temps écoule
+	            //Attend que le serveur reçoive toutes les réponse des clients ou temps écoule
 	            synchronized (serveur) {
 	            	if(es == Etat_Serveur.encherissement){
 	            		serveur.wait();
