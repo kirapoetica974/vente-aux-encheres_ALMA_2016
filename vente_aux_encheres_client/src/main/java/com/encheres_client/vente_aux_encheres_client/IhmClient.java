@@ -63,10 +63,11 @@ public class IhmClient extends Applet{
 			try {
 				prix = Integer.parseInt(prixASurencherir.getText());
 				// On arrête de chrono lorsque le client surencheri
-				chrono.stop();
+				//chrono.stop();
 				prixCourant.setText(Integer.toString(serveurCourant.surencherir(prix)));
 				// On redémarre le chrono quand il y a un nouveau tour d'enchère
-				chrono.start();
+				chrono.stop();
+				chrono.run();
 			} catch(Exception ex){}
 		}
 	}
@@ -131,8 +132,10 @@ public class IhmClient extends Applet{
 			boutonSurencherirPrix.addActionListener(new ActionSurencherirPrix());
 			
 			// On informe au serveur que le temps est écoulé lorsque le chrono atteint 10 secondes
-			if(chrono.getDuree() >= 10){
+			System.out.println("avant");
+			while(chrono.isTempsEcoule()){
 				serveurCourant.tempsEcoule();
+				System.out.println("bqfqz");
 			}
 			
 			

@@ -8,14 +8,14 @@ public class Chronometre {
 	private long duree = 0;
 
 	public void start() {
-		depart=System.currentTimeMillis();
+		depart=System.currentTimeMillis()/1000;
 		fin=0;
 		duree=0;
 	}
 
 	public void stop() {
 		if(depart==0) {return;}
-		fin = System.currentTimeMillis();
+		fin = System.currentTimeMillis()/1000;
 		duree = fin-depart;
 		depart = 0;
 		fin = 0;
@@ -24,7 +24,7 @@ public class Chronometre {
 	//Retourne la durée en seconde
 	public long getDuree() {
 		duree = System.currentTimeMillis()-depart;
-		return duree/1000;
+		return duree;///1000;
 	}
 	
 }

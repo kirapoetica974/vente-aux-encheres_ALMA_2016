@@ -16,8 +16,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.encheres_client.vente_aux_encheres_client.Interface_Client;
-
+//import com.encheres_client.vente_aux_encheres_client.Interface_Client;
+import com.encheres_client.vente_aux_encheres_client.*;
 
 /**
  *
